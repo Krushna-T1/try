@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <style>
+            body{
+                display:flex;
+                align-items: center;
+                justify-content: center;
+            }
+            div{
+               width:300px;
+               display:block;
+               justify-content:center;
+               
+               border:1px solid black;
+               font-size: 0px;
+             
+            }
+            input{
+                width:225px;
+                height:65px;
+                border:0px;
+                background-color:white;
+                
+        
+            }
+            button{
+                width:75px;
+                height:65;
+                border:0px;
+               color:white;
+               background-color:black; 
+            }
+            #cal
+            {
+                background-color: gray;;
+            }
+            #clr
+            {
+                background-color: rgb(47, 172, 172);;
+            }
+        </style>
+        
+
+    </head>
+    <body><div>
+        <input type="text" id="dis" disabled>
+        <button  onClick="reset()" id="clr">AC</button>
+        
+        <button  onClick="aa('9')"  >9</button>
+        <button onClick="aa('8')"  >8</button>
+        <button  onClick="aa('7')" >7</button>
+        <button  onClick="aa('+')"  id="cal" >+</button>
+       
+        <button onClick="aa('6')" >6</button>
+        <button  onClick="aa('5')">5</button>
+        <button onClick="aa('4')" >4</button>
+        <button  onClick="aa('-')"  id="cal">-</button>
+        
+        <button onClick="aa('3')" >3</button>
+        <button  onClick="aa('2')">2</button>
+        <button  onClick="aa('1')" >1</button>
+        <button  onClick="aa('/')"  id="cal">/</button>
+        <button  onClick="aa('.')" >.</button>
+        <button  onClick="aa('0')" >0</button>
+        <button  onClick="cal()" >=</button>
+        <button  onClick="aa('*')"  id="cal">*</button>
+        </div>
+    
+        <script>
+           
+           
+            function aa(a)
+            {
+                
+                document.getElementById("dis").value +=a;
+            }
+            function reset()
+           {
+            document.getElementById("dis").value = ' ';
+           }
+           function cal()
+        {
+            try{
+                            document.getElementById('dis').value=eval(document.getElementById('dis').value);
+        }
+        catch(error)
+        {
+            document.getElementById('dis').value="Error";
+        }
+    }
+        </script>
+
+    </body>
+</html>

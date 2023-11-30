@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #284fdb;
+            margin: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .form1 {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px black;
+            padding: 100px;
+            width: 500px;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .gender-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .gender-label {
+            margin-right: 10px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #e7210f;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<body>
+<div class="form1">
+    <h2>Survey Form</h2>
+    <form>
+        <label for="name">First Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" required>
+
+        <hr>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required>
+
+        <label for="cname">Country:</label>
+        <select id="cname" required>
+            <option>INDIA</option>
+            <option>U.S.A</option>
+            <option>U.K</option>
+            <option>AUSTRALIA</option>
+            <option>CANADA</option>
+            <option>GERMANY</option>
+        </select>
+
+        <br><br>
+        
+        <label>Gender:</label>
+        <div class="gender-container">
+            <label class="gender-label" for="m">Male</label>
+            <input type="radio" value="male" id="m" name="gender" checked="checked">
+            
+            <label class="gender-label" for="f">Female</label>
+            <input type="radio" value="female" id="f" name="gender">
+        </div>
+
+        <label for="pname">Profession:</label>
+        <input type="text" id="pname" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+
+        <label for="tel">Mobile Number:</label>
+        <input type="tel" id="tel" required><br><br>
+
+        <input type="submit" onclick="displayValue()">
+        <input type="reset">
+    </form>
+</div>
+<script>
+    function displayValue() {
+        let name = document.getElementById("name").value;
+        let lname = document.getElementById("lname").value;
+        let dob = document.getElementById("dob").value;
+        let cname = document.getElementById("cname").value;
+        let gender = document.querySelector('input[name="gender"]:checked').value;
+        let pname = document.getElementById("pname").value;
+        let email = document.getElementById("email").value;
+        let pno = document.getElementById("tel").value;
+
+        alert("Name: " + name + " " + lname + "\nDate of Birth: " + dob +
+            "\nCountry: " + cname + "\nGender: " + gender + "\nProfession: " + pname +
+            "\nEmail: " + email + "\nMobile Number: " + pno);
+    }
+</script>
+</body>
+</html>
