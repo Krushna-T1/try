@@ -1,5 +1,10 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+
         <style>
             body{
                 display:flex;
@@ -16,8 +21,8 @@
              
             }
             input{
-                width:225px;
-                height:65px;
+                width:221px;
+                
                 border:0px;
                 background-color:white;
                 
@@ -25,9 +30,10 @@
             }
             button{
                 width:75px;
-                height:65;
+                height:65px;
                 border:0px;
                color:white;
+               font-size: 20px;
                background-color:black; 
             }
             #cal
@@ -59,11 +65,11 @@
         <button onClick="aa('3')" >3</button>
         <button  onClick="aa('2')">2</button>
         <button  onClick="aa('1')" >1</button>
-        <button  onClick="aa('/')"  id="cal">/</button>
+        <button  onClick="aa('/')"  id="cal">÷</button>
         <button  onClick="aa('.')" >.</button>
         <button  onClick="aa('0')" >0</button>
         <button  onClick="cal()" >=</button>
-        <button  onClick="aa('*')"  id="cal">*</button>
+        <button  onClick="aa('*')"  id="cal">×</button>
         </div>
     
         <script>
