@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+           
             background-color: #284fdb;
-            margin: 200px;
+            margin: 100px; 
+            padding-top: 100px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -16,7 +21,7 @@
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px black;
-            padding: 100px;
+            padding: 30px; 
             width: 500px;
         }
 
@@ -68,9 +73,6 @@
             background-color: #e7210f;
         }
     </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Form</title>
 </head>
 <body>
 <div class="form1">
@@ -99,15 +101,17 @@
 
         <br><br>
         
-        <label>Gender:</label>
-        <div class="gender-container">
-            <label class="gender-label" for="m">Male</label>
-            <input type="radio" value="male" id="m" name="gender" checked="checked">
-            
-            <label class="gender-label" for="f">Female</label>
-            <input type="radio" value="female" id="f" name="gender">
-        </div>
-
+        <fieldset>
+            <legend>Gender:</legend>
+            <div class="gender-container">
+                <label class="gender-label" for="m">Male</label>
+                <input type="radio" value="male" id="m" name="gender" checked="checked">
+                
+                <label class="gender-label" for="f">Female</label>
+                <input type="radio" value="female" id="f" name="gender">
+            </div>
+        </fieldset>
+        <br>
         <label for="pname">Profession:</label>
         <input type="text" id="pname" required>
 
